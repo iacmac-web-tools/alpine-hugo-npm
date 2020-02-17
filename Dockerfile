@@ -24,6 +24,7 @@ RUN set -ex \
     &&  mv hugo /usr/bin \
     &&  apk del wget ca-certificates \
     &&  rm /var/cache/apk/* \
+    &&  npm install -D --save postcss-cli
     && hugo version && npm version
 
     
