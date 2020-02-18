@@ -26,4 +26,5 @@ RUN set -ex \
     &&  rm /var/cache/apk/* \
     && hugo version && npm version
 
-    
+WORKDIR /src
+EXPOSE 1313    
