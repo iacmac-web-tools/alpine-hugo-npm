@@ -24,7 +24,7 @@ RUN set -ex \
     &&  mv hugo /usr/bin \
     &&  apk del wget ca-certificates \
     &&  rm /var/cache/apk/* \
-    && hugo version && npm version
+    && npm install -g grunt-cli
 
 WORKDIR /src
 EXPOSE 1313    
