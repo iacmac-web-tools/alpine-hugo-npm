@@ -5,9 +5,9 @@ ENV HUGO_BINARY=hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
 ENV HUGO_DOWNLOAD_URL=https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY}
 ENV GLIBC_VERSION=2.27-r0
 RUN set -ex \
-    && apk add --no-cache  git curl tar \
-    && apk add --update wget ca-certificates libstdc++ libc6-compat \
-    && apk add tzdata libtool automake autoconf nasm \
+    && apk add --no-cache  git curl tar libc6-compat libtool automake autoconf nasm \
+    && apk add --update wget ca-certificates libstdc++  \
+    && apk add tzdata \
     &&  wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub \
     &&  wget "https://github.com/sgerrand/alpine-pkg-glibc/releases/download/$GLIBC_VERSION/glibc-$GLIBC_VERSION.apk" \
     &&  apk --no-cache add "glibc-$GLIBC_VERSION.apk" \
