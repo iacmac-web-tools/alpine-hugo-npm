@@ -1,4 +1,4 @@
-FROM node:12.14.0-alpine3.9
+FROM node:12.19
 
 ENV HUGO_VERSION=0.59.1
 ENV HUGO_BINARY=hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
