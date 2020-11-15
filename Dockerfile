@@ -10,7 +10,6 @@ RUN set -ex \
     automake \
     bash \
     g++ \
-    libc6-compat \
     libjpeg-turbo-dev \
     libpng-dev \
     make \
