@@ -1,6 +1,6 @@
 FROM node:12.14.0-alpine3.9
 
-ENV HUGO_VERSION=0.59.1
+ENV HUGO_VERSION=0.66.0
 ENV HUGO_BINARY=hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
 ENV HUGO_DOWNLOAD_URL=https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY}
 ENV GLIBC_VERSION=2.27-r0
@@ -35,4 +35,4 @@ RUN set -ex \
     && npm install -g grunt-cli
 
 WORKDIR /src
-EXPOSE 1313    
+EXPOSE 1313
